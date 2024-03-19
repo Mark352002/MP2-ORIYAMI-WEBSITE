@@ -1,61 +1,49 @@
-import Gcash from "./components/images/qrcode/gcash.png"
-import Paymaya from "./components/images/qrcode/paymaya.png"
-import Others from "./components/images/qrcode/paymaya.png"
-
+import axios from 'axios';
 
 interface QrDataItem {
-   [x: string]: any;
-   qr_id: number;
-   qr_title: string;
-   qr_image: string;
- }
-const QrData: QrDataItem[]= [
-   {
-      qr_id:1,
-      qr_title: "Gcash",
-      qr_image: Gcash
-   },
-   {
-      qr_id:2,
-      qr_title: "Paymaya",
-      qr_image: Paymaya
-   },
-   {
-      qr_id:3,
-      qr_title: "Other",
-      qr_image: Others
-   }
+    qr_id: number;
+    qr_title: string;
+    qr_image: string;
+}
 
-]
-export type { QrDataItem };
-   export default QrData;
+async function fetchQrDataFromAPI(): Promise<QrDataItem[]> {
+    try {
+        const response = await axios.get('https://nodejs-mysql-dbcollege-api-oriyami.onrender.com/api/v1/posts1/getqr');
+        const qrData = response.data.data.map((qrItem: any) => {
+            // Assuming the qr_image field provides image names without extensions
+            // Construct the qr_image path based on the qr_image from API
+            const imageUrl = `/src/assets/components/components/images/qrcode/${qrItem.qr_image}`;
 
-// import axios from 'axios';
+            console.log('QR Image URL:', imageUrl);
+            return {
+                qr_id: qrItem.qr_id,
+                qr_title: qrItem.qr_title,
+                qr_image: imageUrl
+            };
+        });
 
-// // Define the interface for QR data items
-// interface QrDataItem {
-//     qr_id: number;
-//     qr_title: string;
-//     qr_image: string;
-// }
+        console.log('Fetched QR Data:', qrData); // Log the fetched QR data
 
-// // Define the function to fetch QR data from the API
-// async function fetchQrDataFromAPI(): Promise<QrDataItem[]> {
-//     try {
-//         const response = await axios.get('https://nodejs-mysql-dbcollege-api-oriyami.onrender.com/api/v1/posts1/getqr');
-//         return response.data.data.map((qr: any) => ({
-//             qr_id: qr.qr_id,
-//             qr_title: qr.qr_title,
-//             qr_image: qr.qr_image
-//         }));
-//     } catch (error) {
-//         console.error('Error fetching QR data from API:', error);
-//         return [];
-//     }
-// }
+        return qrData;
+    } catch (error) {
+        console.error('Error fetching QR data from API:', error);
+        return [];
+    }
+}
 
-// // Fetch QR data from the API
-// const QrData: QrDataItem[] = await fetchQrDataFromAPI();
+async function updateQrDataWithAPI(): Promise<QrDataItem[]> {
+    try {
+        const qrDataFromAPI = await fetchQrDataFromAPI();
 
-// // Export the QR data array
-// export default QrData;
+        console.log('Updated QR Data:', qrDataFromAPI); // Log the updated QR data
+
+        return qrDataFromAPI;
+    } catch (error) {
+        console.error('Error updating QR data with API data:', error);
+        return [];
+    }
+}
+
+const QrData = await updateQrDataWithAPI();
+
+export default QrData;
