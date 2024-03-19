@@ -1,0 +1,13 @@
+.gallery-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columns */
+    grid-auto-rows: 300px; /* Each row height set to 300px */
+    gap: 10px; /* Gap between images */
+  }
+  
+  .gallery-container img {
+    max-width: 100%;
+    height: auto;
+    width: 100%; /* Ensure images take up full width of their container */
+    object-fit: cover; /* Ensure images maintain aspect ratio and cover the container */
+  }

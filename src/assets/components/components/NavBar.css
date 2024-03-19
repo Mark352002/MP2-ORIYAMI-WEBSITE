@@ -1,0 +1,42 @@
+nav
+.-blue{
+    background: #539CE1;
+}
+nav{
+    background: #FFFFFF !important;
+    
+   
+}
+.nav-link{
+    margin: 0 12px 0 12px;
+}
+
+.nav-btn{
+    background: #539CE1;
+    color: #FFFFFF;
+    font-size: 15px;
+    width: 130px;
+    height: 45px;
+    border-radius: 5px;
+}
+.navh:hover{
+    color: #4e8fcc !important;
+    cursor: pointer;
+}
+.nav-link{
+    text-decoration: none;
+    color: none;
+}
+.dropdown-toggle::after {
+    display: none !important; /* Hide the dropdown arrow */
+  }
+.nav-height{
+    height: 66px;
+}
+
+#dropdown-basic{
+    margin: 0;
+    height: 45px;
+    width: 130px;
+    
+}

@@ -1,0 +1,24 @@
+/* availability form */
+.availability-form{
+    position: relative;
+    top: -60px;
+    z-index: 2;
+}
+.btn-blue{
+    background: #539CE1;
+    color: #FFFFFF;
+}
+.btn-blue:hover{
+    color: #FFFFFF;
+    background: #4e8fcc;
+}
+hr{
+    width: 105px;
+    border: 1px solid #539CE1;
+    color: #539CE1;
+    opacity: 1;
+}
+/* .hr{
+    width: 100%;
+    opacity: 0.5;
+} */
