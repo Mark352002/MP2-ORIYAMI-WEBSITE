@@ -1,12 +1,12 @@
 import axios from 'axios';
 
-interface QrDataItem {
+export interface QrDataItem {
     qr_id: number;
     qr_title: string;
     qr_image: string;
 }
 
-async function fetchQrDataFromAPI(): Promise<QrDataItem[]> {
+export async function fetchQrDataFromAPI(): Promise<QrDataItem[]> {
     try {
         const response = await axios.get('https://nodejs-mysql-dbcollege-api-oriyami.onrender.com/api/v1/posts1/getqr');
         const qrData = response.data.data.map((qrItem: any) => {
@@ -31,7 +31,7 @@ async function fetchQrDataFromAPI(): Promise<QrDataItem[]> {
     }
 }
 
-async function updateQrDataWithAPI(): Promise<QrDataItem[]> {
+export async function updateQrDataWithAPI(): Promise<QrDataItem[]> {
     try {
         const qrDataFromAPI = await fetchQrDataFromAPI();
 

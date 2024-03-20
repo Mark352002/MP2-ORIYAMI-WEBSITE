@@ -68,12 +68,6 @@
 
 // export default RoomData;
 
-import room1 from './components/images/room/room1.png'
-import room2 from './components/images/room/room2.png'
-import room3 from './components/images/room/room3.png'
-import room4 from './components/images/room/room4.png'
-import room5 from './components/images/room/room5.png'
-import room6 from './components/images/room/room6.png'
 import axios from 'axios';
 
 
@@ -126,3 +120,57 @@ async function updateRoomDataWithAPI(): Promise<Room[]> {
 const RoomData = await updateRoomDataWithAPI();
 
 export default RoomData;
+
+
+
+// import axios from 'axios';
+
+// interface Room {
+//     room_id: number;
+//     room_image: string; // Change type to string to store image URLs
+//     room_name: string;
+//     room_price: number;
+//     room_capacity: string; // Changed to room_capacity to match the API response
+//     room_description: string;
+// }
+
+// async function fetchRoomDataFromAPI(): Promise<Room[]> {
+//     try {
+//         const response = await axios.get('https://nodejs-mysql-dbcollege-api-oriyami.onrender.com/api/v1/posts1/getroom');
+//         const roomData = response.data.data.map((room: any) => {
+//             // Construct the image URL based on the room_image from API
+//             const imageUrl = `/src/assets/components/images/room/${room.room_image}.png`; // Assuming the image extension is always PNG
+//             // const imageUrl = `${room.room_image}`; // Assuming the image extension is always PNG
+
+//             console.log('Image URL:', imageUrl);
+//             return {
+//                 ...room,
+//                 room_image: imageUrl
+//             };
+//         });
+
+//         console.log('Fetched Room Data:', roomData); // Log the fetched room data
+
+//         return roomData;
+//     } catch (error) {
+//         console.error('Error fetching room data from API:', error);
+//         return [];
+//     }
+// }
+
+// async function updateRoomDataWithAPI(): Promise<Room[]> {
+//     try {
+//         const roomDataFromAPI = await fetchRoomDataFromAPI();
+
+//         console.log('Updated Room Data:', roomDataFromAPI); // Log the updated room data
+
+//         return roomDataFromAPI;
+//     } catch (error) {
+//         console.error('Error updating room data with API data:', error);
+//         return [];
+//     }
+// }
+
+// const RoomDataPromise: Promise<Room[]> = updateRoomDataWithAPI();
+
+// export default RoomDataPromise;
