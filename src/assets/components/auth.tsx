@@ -6,6 +6,7 @@ import NavBar from './components/NavBar';
 import { User } from './usersdata';
 import Profile from './components/Profile';
 import Contact_us from './components/Contact_us';
+import Notfound from './Notfound';
 
 
 type AuthProps = {
@@ -27,6 +28,7 @@ const Auth: React.FC<AuthProps> = ({ isLoggedIn, currentUser }) => {
       || <Route  element={<NavBar />} />
       || <Route  element={<Profile />} />
       || <Route  element={<Contact_us />} />
+      || <Route  element={<Notfound />} />
 
       // || <Route  element={<Profile  currentUser={currentUser}/>} />
 

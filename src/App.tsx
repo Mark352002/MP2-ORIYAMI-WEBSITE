@@ -16,6 +16,7 @@ import About from './assets/components/components/About';
 import Faq  from './assets/components/components/Faq';
 import Terms from './assets/components/components/Terms';
 import Profile1 from './assets/components/components/Profile1';
+import Notfound from './assets/components/Notfound';
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -34,6 +35,7 @@ function App() {
       <Router>
         <Routes>
           {!isLoggedIn && <Route path="/"  element={<Login onLogin={handleLogin}  />} />}
+          <Route path="*" element={<Notfound  />} />
           
           <Route path="/register" element={<Register />} />
           <Route path="/" element={<Auth isLoggedIn={isLoggedIn} currentUser={currentUser} />} />
