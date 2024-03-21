@@ -112,7 +112,8 @@ const Reservation: FC<Profileprops> = ({ currentUser }) => {
       ) : (
         <div>No reservations found.</div>
       )}
-      <p className='mb-5 mt-5'></p>
+      <p className='mb-5 mt-5'>&nbsp;</p>
+      <p className='mb-5 mt-5'>&nbsp;</p>
       <Footer/>
     </div>
   );

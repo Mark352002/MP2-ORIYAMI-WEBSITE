@@ -19,7 +19,7 @@ const Gallery = () => {
           <center className='mt-5'>
             <p>&nbsp;</p>
             <hr className='mt-5' />
-            <h4 className='mb-5'>Reservations</h4>
+            <h4 className='mb-5'>Gallery</h4>
           </center>
         </div>
         <div className="gallery-container container mb-5">
