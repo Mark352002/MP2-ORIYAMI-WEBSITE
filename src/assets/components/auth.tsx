@@ -24,6 +24,8 @@ const Auth: React.FC<AuthProps> = ({ isLoggedIn, currentUser }) => {
         <Route path="/" element={<Navigate to="/login" />} />
       )}
       {        <Route path="/gallery" element={<Gallery />} />
+          
+      || <Route path="*" element={<Notfound  />} />
       || <Route  element={<NavBar />} />
       || <Route  element={<NavBar />} />
       || <Route  element={<Profile />} />
