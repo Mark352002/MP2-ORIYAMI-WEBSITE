@@ -4,6 +4,13 @@ import backgroundImage from './components/images/Carousel/bg.jpg'; // Import the
 import logoicon from "./components/images/logo/logo.png"
 import { Link } from "react-router-dom";
 
+
+function Logout() {
+  window.location.href = "/";
+  setTimeout(function() {
+    window.location.reload();
+  }, 100);
+}
 interface FormInput {
   firstname: string;
   lastname: string;
@@ -253,7 +260,7 @@ const Register: React.FC = () => {
           />
           <p className="error-message">{formError.confirmPass}</p>
           <p className="success-message">{formInput.successMsg}</p>
-          <p>Already have an account? <Link to="/">Login</Link></p>
+          <p>Already have an account? <Link to="/" onClick={Logout}>Login</Link></p>
   
           {/* submit button */}
           <input type="submit" className="btn-blue btn" value="Submit" />
