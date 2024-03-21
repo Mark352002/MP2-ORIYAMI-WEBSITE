@@ -1,5 +1,5 @@
 import { useState } from "react";
-import {  useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import RoomData from "../RoomData";
 import QrData, { QrDataItem } from "../QrData";
 import NavBar from "./NavBar";
@@ -51,7 +51,7 @@ const Cardroom: React.FC<Profileprops> = ({ currentUser }) => {
     const numberOfDays = calculateNumberOfDays();
     if (roomInfo) {
       const totalPrice = numberOfDays * roomInfo.room_price;
-      return totalPrice.toLocaleString();
+      return totalPrice.toLocaleString(); // Format the price using toLocaleString()
     }
     return "0";
   };
@@ -121,7 +121,7 @@ const Cardroom: React.FC<Profileprops> = ({ currentUser }) => {
             <img src={roomInfo.room_image} className="card-img-top" alt="..." />
             <div className="card-body">
               <h5 className="card-title">{roomInfo.room_name}</h5>
-              <h5 className="card-title">₱ {roomInfo.room_price}</h5>
+              <h5 className="card-title">₱ {roomInfo.room_price.toLocaleString()}</h5> {/* Format price here */}
             </div>
           </div>
         )}

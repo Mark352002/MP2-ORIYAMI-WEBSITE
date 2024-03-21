@@ -99,7 +99,7 @@ const Reservation: FC<Profileprops> = ({ currentUser }) => {
                 <td style={{ border: '1px solid #cccccc' }}>{formatDate(reservation.reservation_created)}</td>
                 <td style={{ border: '1px solid #cccccc' }}>{formatDate(reservation.reservation_in)}</td>
                 <td style={{ border: '1px solid #cccccc' }}>{formatDate(reservation.reservation_out)}</td>
-                <td style={{ border: '1px solid #cccccc' }}>{reservation.reservation_total}</td>
+                <td style={{ border: '1px solid #cccccc' }}>₱ {reservation.reservation_total.toLocaleString()}</td>
                 <td style={{ border: '1px solid #cccccc' }}>{reservation.reservation_ref}</td>
                 <td style={{ border: '1px solid #cccccc' }}>{reservation.reservation_status}</td>
                 <td style={{ border: '1px solid #cccccc' }}>

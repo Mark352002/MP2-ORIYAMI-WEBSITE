@@ -23,7 +23,7 @@ const Rooms = () => {
                         <Card.Body>
                             <Card.Title>{roomInfo.room_name}</Card.Title>
                             <Card.Text style={{ height: 100 }}>{roomInfo.room_description}</Card.Text>
-                            <p className=''>₱ {roomInfo.room_price} per day</p><br />
+                            <p className=''>₱ {roomInfo.room_price.toLocaleString()} per day</p><br />
                            
                                 <Button element="button">Book</Button>
                             

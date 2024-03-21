@@ -1,34 +1,4 @@
-import Gcash from "./components/images/qrcode/gcash.png"
-import Paymaya from "./components/images/qrcode/paymaya.png"
-import Others from "./components/images/qrcode/paymaya.png"
 
-
-interface QrDataItem {
-   [x: string]: any;
-   qr_id: number;
-   qr_title: string;
-   qr_image: string;
- }
-const QrData: QrDataItem[]= [
-   {
-      qr_id:1,
-      qr_title: "Gcash",
-      qr_image: Gcash
-   },
-   {
-      qr_id:2,
-      qr_title: "Paymaya",
-      qr_image: Paymaya
-   },
-   {
-      qr_id:3,
-      qr_title: "Other",
-      qr_image: Others
-   }
-
-]
-export type { QrDataItem };
-   export default QrData;
 // import axios from 'axios';
 
 // export interface QrDataItem {
@@ -78,3 +48,49 @@ export type { QrDataItem };
 // const QrData = await updateQrDataWithAPI();
 
 // export default QrData;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+import Gcash from "./components/images/qrcode/gcash.png"
+import Paymaya from "./components/images/qrcode/paymaya.png"
+import Others from "./components/images/qrcode/paymaya.png"
+
+
+interface QrDataItem {
+   [x: string]: any;
+   qr_id: number;
+   qr_title: string;
+   qr_image: string;
+ }
+const QrData: QrDataItem[]= [
+   {
+      qr_id:1,
+      qr_title: "Gcash",
+      qr_image: Gcash
+   },
+   {
+      qr_id:2,
+      qr_title: "Paymaya",
+      qr_image: Paymaya
+   },
+   {
+      qr_id:3,
+      qr_title: "Other",
+      qr_image: Others
+   }
+
+]
+export type { QrDataItem };
+   export default QrData;

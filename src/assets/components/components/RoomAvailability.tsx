@@ -56,7 +56,7 @@ const RoomAvailability = () => {
                   <Card.Title>{roomInfo.room_name}</Card.Title>
                   {/* <Card.Text style={{ height: 100 }}>{roomInfo.room_description}</Card.Text> */}
                   <p className=''>Capacity: {roomInfo.room_capacity}</p><br />
-                  <p className=''>₱ {roomInfo.room_price} per day</p><br />
+                  <p className=''>₱ {roomInfo.room_price.toLocaleString()} per day</p><br />
                   {/* Add button functionality if needed */}
                   <Link to={`/rooms/${roomInfo.room_id}`}>
                     <Button element="button">Book</Button>
