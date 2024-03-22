@@ -15,7 +15,6 @@ import Contact_us from './assets/components/components/Contact_us';
 import About from './assets/components/components/About';
 import Faq  from './assets/components/components/Faq';
 import Terms from './assets/components/components/Terms';
-import Profile1 from './assets/components/components/Profile1';
 import Notfound from './assets/components/Notfound';
 
 function App() {
