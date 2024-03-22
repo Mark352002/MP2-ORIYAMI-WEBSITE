@@ -6,6 +6,7 @@ import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import "./Profile.css"
 import Footer from './Footer';
+import FeedbackModal from './Feedback';
 
 interface ProfileProps {
   currentUser?: User;
@@ -61,6 +62,8 @@ const Profile: FC<ProfileProps> = ({ currentUser }) => {
   return (
     <div className="">
       <NavBar />
+      <FeedbackModal currentUser={currentUser} />
+
    <div>
        
    <center className='mt-5'>

@@ -1,10 +1,21 @@
 import NavBar from './NavBar'
 import Footer from './Footer'
+import { User } from '../usersdata';
+import FeedbackModal from './Feedback';
+import { FC } from 'react';
 
-const Terms = () => {
+
+interface HomeProps {
+  currentUser?: User;
+  
+}
+  
+const Terms :FC<HomeProps>  = ({ currentUser }) =>{
   return (
     <div>
       <NavBar/>
+      <FeedbackModal currentUser={currentUser} />
+
 <section className="terms mb-5">
 <center className='mt-5'>
             <p>&nbsp;</p>

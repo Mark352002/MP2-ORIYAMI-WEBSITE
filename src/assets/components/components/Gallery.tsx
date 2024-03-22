@@ -9,11 +9,21 @@ import image6 from "./images/Gallery/6.jpg";
 import image7 from "./images/Gallery/7.jpg";
 import image8 from "./images/Gallery/8.jpg";
 import Footer from './Footer';
+import { User } from '../usersdata';
+import { FC } from 'react';
+import FeedbackModal from './Feedback';
 
-const Gallery = () => {
+interface HomeProps {
+  currentUser?: User;
+  
+}
+
+const Gallery :FC<HomeProps>  = ({ currentUser }) =>{
   return (
     <div>
       <NavBar />
+      <FeedbackModal currentUser={currentUser} />
+
       <section>
         <div className="mb-5 mt-5">
           <center className='mt-5'>

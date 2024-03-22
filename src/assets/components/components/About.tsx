@@ -1,11 +1,21 @@
 import NavBar from './NavBar'
 import ABOUT from "./images/Highlight/imgabout.png"
 import Footer from './Footer'
+import { User } from '../usersdata';
+import { FC } from 'react';
+import FeedbackModal from './Feedback';
 
-const About = () => {
+
+interface HomeProps {
+  currentUser?: User;
+  
+}
+const About:FC<HomeProps>  = ({ currentUser }) =>{
   return (
     <div>
       <NavBar/>
+      <FeedbackModal currentUser={currentUser} />
+
       <center className='mt-5'>
       <p>&nbsp;</p>
         <hr className='mt-5'/>

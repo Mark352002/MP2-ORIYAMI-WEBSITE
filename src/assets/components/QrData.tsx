@@ -84,13 +84,7 @@ const QrData: QrDataItem[]= [
       qr_id:2,
       qr_title: "Paymaya",
       qr_image: Paymaya
-   },
-   {
-      qr_id:3,
-      qr_title: "Other",
-      qr_image: Others
    }
-
 ]
 export type { QrDataItem };
    export default QrData;

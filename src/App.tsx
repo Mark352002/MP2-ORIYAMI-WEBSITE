@@ -42,12 +42,12 @@ function App() {
           {isLoggedIn && (
             <>
               <Route path="/home" element={<Home currentUser={currentUser} />} />
-              <Route path="/gallery" element={<Gallery />} />
-              <Route path="/about" element={<About />} />
-              <Route path="/faq" element={<Faq />} />
-              <Route path="/terms" element={<Terms />} />
-              <Route path="/profile1" element={<Profile1 />} />
-              <Route path="/contact_us" element={<Contact_us />} />
+              <Route path="/gallery" element={<Gallery currentUser={currentUser} />} />
+              <Route path="/about" element={<About currentUser={currentUser}/>} />
+              <Route path="/faq" element={<Faq currentUser={currentUser}/>} />
+              <Route path="/terms" element={<Terms currentUser={currentUser} />} />
+              {/* <Route path="/profile1" element={<Profile1 currentUser={currentUser}/>} /> */}
+              <Route path="/contact_us" element={<Contact_us currentUser={currentUser}/>} />
               <Route path="/reservation" element={<Reservation currentUser={currentUser}/>} />
               <Route path="/profile" element={<Profile currentUser={currentUser} />} />
               <Route path='/rooms/:id' element={<Cardroom currentUser={currentUser}/>}/>

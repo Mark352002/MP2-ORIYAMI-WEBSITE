@@ -6,6 +6,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import NavBar from './NavBar';
 import { User } from '../usersdata';
 import Footer from './Footer';
+import FeedbackModal from './Feedback';
 
 interface ReservationData {
   reservation_id: number;
@@ -66,6 +67,8 @@ const Reservation: FC<Profileprops> = ({ currentUser }) => {
   return (
     <div>
       <NavBar />
+      <FeedbackModal currentUser={currentUser} />
+
       <center className='mt-5'>
       <p>&nbsp;</p>
         <hr className='mt-5'/>

@@ -1,11 +1,20 @@
 import Accordion from 'react-bootstrap/Accordion';
 import NavBar from './NavBar';
 import Footer from './Footer';
+import { FC } from 'react';
+import { User } from '../usersdata';
+import FeedbackModal from './Feedback';
 
-const Faq = () => {
+interface HomeProps {
+  currentUser?: User;
+  
+}
+const Faq:FC<HomeProps>  = ({ currentUser }) =>{
   return (
     <div>
       <NavBar/>
+      <FeedbackModal currentUser={currentUser} />
+      
       <section>
         <div>
         <center className='mt-5'>
