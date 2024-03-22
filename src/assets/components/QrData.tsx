@@ -65,7 +65,6 @@
 
 import Gcash from "./components/images/qrcode/gcash.png"
 import Paymaya from "./components/images/qrcode/paymaya.png"
-import Others from "./components/images/qrcode/paymaya.png"
 
 
 interface QrDataItem {
